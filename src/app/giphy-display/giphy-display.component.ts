@@ -14,8 +14,8 @@ export class GiphyDisplayComponent implements OnInit {
   constructor(private giphyService: GiphyServiceService) {
     this.giphies = new Giphy([]);
    }
-   findThisGiphies(whatToSearch:any) {
-    this.giphyService.findGiphies(whatToSearch).then((success) => {
+   findThisGiphies() {
+    this.giphyService.findGiphies().then((success) => {
       this.giphies = this.giphyService.data;
       
     }),
@@ -37,7 +37,7 @@ export class GiphyDisplayComponent implements OnInit {
 
   ngOnInit(): void {
     // this.findThisGiphies('ryan+gosling');
-    this.findThisGiphies('');
+    this.findThisGiphies();
   }
 
 }
