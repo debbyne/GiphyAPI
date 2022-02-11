@@ -16,8 +16,6 @@ export class GiphyServiceService {
     interface GiphyApi{
       data:Array<string>
     }
-    // let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
-    // let request =  "https://api.giphy.com/v1/gifs/trending?q=ryan+gosling&api_key=da1g5XUy1Hnvv8FGjmXkJREGIhMKyi1N&limit=5000";
     let request =  "https://api.giphy.com/v1/gifs/trending?q="+GiphyType+"&api_key=da1g5XUy1Hnvv8FGjmXkJREGIhMKyi1N&limit=5000";
     // let params={headers:headers}
     let promise = new Promise((resolve, reject) => {
@@ -39,10 +37,9 @@ export class GiphyServiceService {
     interface GiphyApi{
       data:Array<string>
     }
-    // let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
+   
     let request =  "https://api.giphy.com/v1/gifs/search?q="+GiphyType+"&api_key=da1g5XUy1Hnvv8FGjmXkJREGIhMKyi1N&limit=5000";
-    // let request =  "https://api.giphy.com/v1/gifs/trending?q="+GiphyType+"&api_key=da1g5XUy1Hnvv8FGjmXkJREGIhMKyi1N&limit=5000";
-    // let params={headers:headers}
+    
     let promise = new Promise((resolve, reject) => {
       this.http.get<GiphyApi>(request).toPromise().then((response: any) => { this.data = response;
             
@@ -57,9 +54,6 @@ export class GiphyServiceService {
     });
     return promise;
    }
-
-   
-
 
 
 }

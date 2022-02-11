@@ -17,7 +17,7 @@ export class GiphyDisplayComponent implements OnInit {
    findThisGiphies(whatToSearch:any) {
     this.giphyService.findGiphies(whatToSearch).then((success) => {
       this.giphies = this.giphyService.data;
-      // confirm(whatToSearch)
+      
     }),
       (error: any) => {
         console.log(error)
@@ -27,7 +27,7 @@ export class GiphyDisplayComponent implements OnInit {
   findMyGiphies(whatToSearch:any) {
     this.giphyService.findMyGiphies(whatToSearch).then((success) => {
       this.giphies = this.giphyService.data;
-      // confirm(whatToSearch)
+      
     }),
       (error: any) => {
         console.log(error)

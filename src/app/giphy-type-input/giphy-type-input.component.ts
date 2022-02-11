@@ -13,7 +13,7 @@ export class GiphyTypeInputComponent implements OnInit {
 
   searchFor() {
     this.sendValue.emit(this.whatToSearch);
-    // confirm(this.whatToSearch)
+    
   }
 
   constructor() { }
