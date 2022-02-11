@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <h2 class="text-center">Trending Gifs - Giphy API</h2>
+    <hr>
+    <form>
+        <div class="form-group">
+  
+            <label for="whatToSearch">giphyType</label>
+            <input type="text" name="whatToSearch" id="search-values" [(ngModel)]="whatToSearch" placeholder="giphyType"  />
+  
+        <button id="submit" type="submit" (click)="searchFor();" >SUBMIT</button>
+        </div>
+    </form>
+  </div>
