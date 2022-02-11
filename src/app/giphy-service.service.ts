@@ -12,7 +12,7 @@ export class GiphyServiceService {
     this.data! = new Giphy([]);
    }
 
-   findGiphies(){
+   trendingGiphies(){
     interface GiphyApi{
       data:Array<string>
     }
@@ -33,7 +33,7 @@ export class GiphyServiceService {
     return promise;
    }
 
-   findMyGiphies(GiphyType:any){
+   searchGiphies(GiphyType:any){
     interface GiphyApi{
       data:Array<string>
     }
