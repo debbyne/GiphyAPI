@@ -1,5 +1,6 @@
-body{
+.gifs{
     overflow-x: hidden;
+    background-color: blanchedalmond;
 }
 ul {
     margin: 0 auto;
